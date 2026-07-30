@@ -10,7 +10,7 @@ namespace StudentAttendanceApp
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string studentName = txtStudentName.Text.Trim();
-            string status = cmbStatus.Text;
+            string status = cbbStatus.Text;
 
             if (string.IsNullOrWhiteSpace(studentName))
             {
@@ -37,6 +37,25 @@ namespace StudentAttendanceApp
             txtStudentName.Clear();
             cbbStatus.SelectedIndex = -1;
             txtStudentName.Focus();
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            if (lstAttendance.Items.Count == 0)
+            {
+                MessageBox.Show("There are no attendance records to clear.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to clear all attendance records?",
+                "Confirm Clear",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+                lstAttendance.Items.Clear();
 
         }
     }

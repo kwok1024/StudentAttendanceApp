@@ -11,7 +11,9 @@ A C# Windows Forms application for recording student attendance. This project is
 
 ## Technologies
 - C#
-- Windows Forms17- Visual Studio 202618- Git and GitHub
+- Windows Forms
+- Visual Studio 2026
+- Git and GitHub
 
 ## Run the Application
 1. Clone the repository:

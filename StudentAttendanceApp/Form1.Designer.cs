@@ -32,6 +32,7 @@
             txtStudentName = new TextBox();
             btnAdd = new Button();
             lstAttendance = new ListBox();
+            cbbStatus = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -52,27 +53,37 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(12, 55);
+            btnAdd.Location = new Point(12, 99);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(305, 41);
             btnAdd.TabIndex = 2;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // lstAttendance
             // 
             lstAttendance.FormattingEnabled = true;
-            lstAttendance.Items.AddRange(new object[] { "Present", "Late", "Absent", "Sick Leave" });
-            lstAttendance.Location = new Point(12, 113);
+            lstAttendance.Location = new Point(12, 164);
             lstAttendance.Name = "lstAttendance";
-            lstAttendance.Size = new Size(305, 310);
+            lstAttendance.Size = new Size(305, 259);
             lstAttendance.TabIndex = 3;
+            // 
+            // cbbStatus
+            // 
+            cbbStatus.FormattingEnabled = true;
+            cbbStatus.Items.AddRange(new object[] { "Present", "Late", "Absent", "Sick Leave" });
+            cbbStatus.Location = new Point(14, 50);
+            cbbStatus.Name = "cbbStatus";
+            cbbStatus.Size = new Size(303, 25);
+            cbbStatus.TabIndex = 4;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(330, 435);
+            Controls.Add(cbbStatus);
             Controls.Add(lstAttendance);
             Controls.Add(btnAdd);
             Controls.Add(txtStudentName);
@@ -89,5 +100,6 @@
         private TextBox txtStudentName;
         private Button btnAdd;
         private ListBox lstAttendance;
+        private ComboBox cbbStatus;
     }
 }

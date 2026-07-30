@@ -58,5 +58,28 @@ namespace StudentAttendanceApp
                 lstAttendance.Items.Clear();
 
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (lstAttendance.Items.Count == 0)
+            {
+                MessageBox.Show("There are no attendance records to save.");
+                return;
+            }
+
+            using SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "Text files (*.txt)|*.txt";
+            dialog.FileName = "AttendanceRecords.txt";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                using StreamWriter writer = new StreamWriter(dialog.FileName);
+                foreach (object item in lstAttendance.Items)
+                    writer.WriteLine(item.ToString());
+
+                MessageBox.Show("Attendance records were saved successfully.");
+            }
+
+        }
     }
 }

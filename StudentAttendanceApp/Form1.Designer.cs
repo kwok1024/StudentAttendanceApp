@@ -34,6 +34,7 @@
             lstAttendance = new ListBox();
             cbbStatus = new ComboBox();
             btnClear = new Button();
+            btnSave = new Button();
             SuspendLayout();
             // 
             // label1
@@ -65,7 +66,7 @@
             // lstAttendance
             // 
             lstAttendance.FormattingEnabled = true;
-            lstAttendance.Location = new Point(14, 188);
+            lstAttendance.Location = new Point(12, 179);
             lstAttendance.Name = "lstAttendance";
             lstAttendance.Size = new Size(305, 310);
             lstAttendance.TabIndex = 3;
@@ -89,11 +90,22 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(12, 495);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(305, 41);
+            btnSave.TabIndex = 6;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(330, 509);
+            ClientSize = new Size(330, 544);
+            Controls.Add(btnSave);
             Controls.Add(btnClear);
             Controls.Add(cbbStatus);
             Controls.Add(lstAttendance);
@@ -114,5 +126,6 @@
         private ListBox lstAttendance;
         private ComboBox cbbStatus;
         private Button btnClear;
+        private Button btnSave;
     }
 }

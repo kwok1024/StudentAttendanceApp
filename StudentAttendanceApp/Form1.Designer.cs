@@ -33,6 +33,7 @@
             btnAdd = new Button();
             lstAttendance = new ListBox();
             cbbStatus = new ComboBox();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // label1
@@ -53,7 +54,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(12, 99);
+            btnAdd.Location = new Point(12, 85);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(305, 41);
             btnAdd.TabIndex = 2;
@@ -64,9 +65,9 @@
             // lstAttendance
             // 
             lstAttendance.FormattingEnabled = true;
-            lstAttendance.Location = new Point(12, 164);
+            lstAttendance.Location = new Point(14, 188);
             lstAttendance.Name = "lstAttendance";
-            lstAttendance.Size = new Size(305, 259);
+            lstAttendance.Size = new Size(305, 310);
             lstAttendance.TabIndex = 3;
             // 
             // cbbStatus
@@ -78,11 +79,22 @@
             cbbStatus.Size = new Size(303, 25);
             cbbStatus.TabIndex = 4;
             // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(12, 132);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(305, 41);
+            btnClear.TabIndex = 5;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(330, 435);
+            ClientSize = new Size(330, 509);
+            Controls.Add(btnClear);
             Controls.Add(cbbStatus);
             Controls.Add(lstAttendance);
             Controls.Add(btnAdd);
@@ -101,5 +113,6 @@
         private Button btnAdd;
         private ListBox lstAttendance;
         private ComboBox cbbStatus;
+        private Button btnClear;
     }
 }

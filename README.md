@@ -28,5 +28,3 @@ A C# Windows Forms application for recording student attendance. This project is
 2. Open `StudentAttendanceApp.slnx` in Visual Studio 2026. 
 
 3. Build and run the application.
-
-4.

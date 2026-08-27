@@ -4,7 +4,7 @@ namespace StudentAttendanceApp
     {
         public string GetSystemStatus()
         {
-            return "Status: Active and Running";
+            return "Status: Active, Online and Secure";
         }
 
         public Form1()

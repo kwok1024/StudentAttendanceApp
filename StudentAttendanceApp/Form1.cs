@@ -2,6 +2,11 @@ namespace StudentAttendanceApp
 {
     public partial class Form1 : Form
     {
+        public string GetSystemStatus()
+        {
+            return "Status: Ready";
+        }
+
         public Form1()
         {
             InitializeComponent();
